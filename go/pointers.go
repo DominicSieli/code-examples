@@ -2,21 +2,21 @@ package main
 
 import "fmt"
 
-func square(n *int) int{
+func square(n *int) int {
 	return *n * *n
 }
 
 func main() {
 	var value int = 0
-	pointer := &value
+	stackPointer := &value
 	heapPointer := new(int)
 
-	*pointer = 4
+	*stackPointer = 4
 	*heapPointer = 8
 
-	*pointer = square(pointer)
+	*stackPointer = square(stackPointer)
 	*heapPointer = square(heapPointer)
 
-	fmt.Println(*pointer)
+	fmt.Println(*stackPointer)
 	fmt.Println(*heapPointer)
 }

@@ -13,7 +13,9 @@ func printAll(slice []string) {
 }
 
 func main() {
-	names := []string{"Dom","Ash","Nora","Zack"}
+	sqr := square(5)
+	names := []string{"Dom", "Ash", "Nora", "Zack"}
 
+	fmt.Println(sqr)
 	printAll(names)
 }
